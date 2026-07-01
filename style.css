@@ -1,18 +1,14 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-
-    background:#F7F3EE;
-    color:#4D5C4A;
-
-    font-family:"Cormorant Garamond",serif;
-
-}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Cormorant Garamond',serif;background:#F7F3EE;color:#4D5C4A}
+.hero{height:100vh;background:#b8b8b8 center/cover no-repeat;position:relative;display:flex;justify-content:center;align-items:center;text-align:center}
+.overlay{position:absolute;inset:0;background:rgba(0,0,0,.35)}
+.content{position:relative;color:#fff;padding:20px}
+h1{font-family:'Great Vibes',cursive;font-size:4rem;font-weight:400}
+.rings{font-size:2rem;color:#C7A45A;margin:.6rem 0}
+.date,.place,#countdown{font-size:1.3rem;margin-top:.7rem}
+.scroll{display:inline-block;margin-top:2rem;color:#fff;text-decoration:none;font-size:2rem}
+.nav{position:sticky;top:0;display:flex;justify-content:center;gap:2rem;padding:1rem;background:rgba(247,243,238,.92);backdrop-filter:blur(8px);border-bottom:1px solid #C7A45A}
+.nav a{text-decoration:none;color:#4D5C4A;font-family:Montserrat,sans-serif}
+section{max-width:1000px;margin:auto;padding:80px 20px}
+h2{margin-bottom:1rem}
