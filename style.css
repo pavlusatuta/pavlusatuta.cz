@@ -1,9 +1,36 @@
 :root{
 
+    /* Barvy */
+
     --cream:#F7F3EC;
+    --cream-dark:#F0EBE1;
+
     --gold:#B79A63;
+    --gold-light:#D4B67A;
+
     --green:#314133;
+    --green-light:#49604C;
+
     --text:#3A342F;
+    --text-light:#6A645E;
+
+    --white:#FFFFFF;
+
+    /* Rozměry */
+
+    --max-width:1200px;
+
+    --radius:18px;
+    --radius-large:30px;
+
+    /* Stíny */
+
+    --shadow-small:0 6px 18px rgba(0,0,0,.05);
+    --shadow-large:0 15px 40px rgba(0,0,0,.08);
+
+    /* Animace */
+
+    --transition:.35s ease;
 
 }
 
