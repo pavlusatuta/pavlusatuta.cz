@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     // Datum svatby
-    const weddingDate = new Date("2027-06-18T12:00:00");
+    const weddingDate = new Date("2027-10-10T11:00:00");
 
     function updateCountdown() {
 
