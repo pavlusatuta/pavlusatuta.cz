@@ -229,4 +229,30 @@ section h2{
 
 }
 
+    .countdown{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    margin:40px 0 60px;
+    flex-wrap:wrap;
+}
+
+.countdown div{
+    min-width:90px;
+}
+
+.countdown span{
+    display:block;
+    font-family:"Cormorant Garamond",serif;
+    font-size:52px;
+    color:var(--green);
+}
+
+.countdown small{
+    display:block;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:var(--gold);
+}
+
 }
