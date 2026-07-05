@@ -283,3 +283,14 @@ section h2{
 }
 
 }
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+
+    width:min(92%, var(--max-width));
+    margin:0 auto;
+
+}
