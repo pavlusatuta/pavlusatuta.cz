@@ -62,14 +62,17 @@ h2 {
     align-items: center;
     justify-content: center;
     gap: 0;
-    font-size: clamp(52px, 7vw, 82px);
-    line-height: 1;
-    color: var(--green);
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-size: clamp(50px, 6.2vw, 76px);
+    line-height: 1.05;
+    color: #000000;
+    white-space: nowrap;
 }
 
 .rings {
-    width: 46px;
-    height: 46px;
+    width: 50px;
+    height: 50px;
     object-fit: contain;
     margin: 0 18px;
     flex: 0 0 auto;
@@ -284,8 +287,8 @@ footer {
     }
 
     .rings {
-        width: 34px;
-        height: 34px;
+        width: 38px;
+        height: 38px;
         margin: 0 10px;
     }
 
@@ -329,12 +332,14 @@ footer {
 
 @media (max-width: 430px) {
     .hero h1 {
-        font-size: 46px;
+        font-size: 42px;
+        white-space: normal;
+        flex-wrap: nowrap;
     }
 
     .rings {
-        width: 30px;
-        height: 30px;
+        width: 32px;
+        height: 32px;
         margin: 0 7px;
     }
 
