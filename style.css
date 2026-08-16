@@ -370,3 +370,38 @@ footer {
         letter-spacing: 1.5px;
     }
 }
+
+/* Menší notebooky – zmenšení úvodní obrazovky */
+@media (min-width: 769px) and (max-height: 850px) {
+    .hero {
+        padding: 35px 25px 25px;
+    }
+
+    .hero h1 {
+        font-size: clamp(44px, 5.2vw, 62px);
+        margin-bottom: 10px;
+    }
+
+    .rings-divider {
+        margin: 4px 0;
+    }
+
+    .rings-divider .line {
+        width: 70px;
+    }
+
+    .rings {
+        width: 40px;
+        height: 40px;
+    }
+
+    .castle {
+        width: min(230px, 42vw);
+        max-height: 115px;
+        margin: 2px auto 10px;
+    }
+
+    .date {
+        margin-top: 5px;
+    }
+}
