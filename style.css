@@ -557,3 +557,17 @@ footer {
 .content-section .container {
     width: 100%;
 }
+
+ .content-section .scroll-arrow {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 30px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
