@@ -1,93 +1,108 @@
 <!DOCTYPE html>
 <html lang="cs">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Michal & Lucie | Naše svatba</title>
-
     <meta name="description" content="Svatební web Michala a Lucie">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
+    <div class="corner top-left" aria-hidden="true"></div>
+    <div class="corner top-right" aria-hidden="true"></div>
+    <div class="corner bottom-left" aria-hidden="true"></div>
+    <div class="corner bottom-right" aria-hidden="true"></div>
 
-<div class="corner top-left"></div>
-<div class="corner top-right"></div>
-<div class="corner bottom-left"></div>
-<div class="corner bottom-right"></div>
+    <main>
+        <header class="hero">
+            <img src="images/castle.png" class="castle" alt="Zámek Nové Město nad Metují">
 
-<header class="hero">
+            <h1>
+                <span>Michal</span>
+                <img src="images/rings.png" class="rings" alt="" aria-hidden="true">
+                <span>Lucie</span>
+            </h1>
 
-    <img src="images/castle.svg" class="castle" alt="Zámek">
+            <div class="date">10. října 2026 • 11:00</div>
 
-    <h1>
-        Michal
-        <img src="images/rings.svg" class="rings" alt="">
-        Lucie
-    </h1>
+            <div class="countdown-title">Do našeho obřadu zbývá</div>
 
-    <div class="date">
-        10. října 2026 • 11:00
-    </div>
-    <div class="countdown-title">
-Do našeho obřadu zbývá
-</div>
-    <div id="countdown" class="countdown">
-    <div><span id="days">0</span><small>dní</small></div>
-    <div><span id="hours">0</span><small>hodin</small></div>
-    <div><span id="minutes">0</span><small>minut</small></div>
-</div>
+            <div id="countdown" class="countdown" aria-label="Odpočet do obřadu">
+                <div><span id="days">00</span><small>dní</small></div>
+                <div><span id="hours">00</span><small>hodin</small></div>
+                <div><span id="minutes">00</span><small>minut</small></div>
+            </div>
 
-</header>
+            <a class="scroll-arrow" href="#obrad" aria-label="Přejít na informace o obřadu">
+                <span></span>
+            </a>
+        </header>
 
-<section id="info">
-    <div class="container">
+        <section id="obrad" class="content-section">
+            <div class="container narrow">
+                <p class="eyebrow">10. října 2026</p>
+                <h2>Obřad</h2>
+                <p class="lead">Naše „ano“ si řekneme v 11:00 hodin na zámku v Novém Městě nad Metují.</p>
 
-    <h2>Svatební den</h2>
+                <div class="location">
+                    <span class="location-line"></span>
+                    <p>Zámek Nové Město nad Metují</p>
+                    <span class="location-line"></span>
+                </div>
+            </div>
+        </section>
 
-    <p>
-        Vítejte na našem svatebním webu.
-        Najdete zde všechny důležité informace o našem velkém dni.
-    </p>
- </div>
-</section>
+        <section id="party" class="content-section content-section--soft">
+            <div class="container narrow">
+                <p class="eyebrow">Potom společně oslavíme</p>
+                <h2>Party</h2>
+                <p class="lead">Po obřadu bude čas slavit, povídat si, jíst, pít a hlavně být spolu.</p>
+                <!-- Místo a další podrobnosti party doplníme, až budou definitivní. -->
+            </div>
+        </section>
 
-<section>
-    <div class="container">
-        <h2>Harmonogram</h2>
-    </div>
-</section>
+        <section id="dary" class="content-section">
+            <div class="container narrow">
+                <p class="eyebrow">To nejdůležitější už máme</p>
+                <h2>Svatební dary</h2>
+                <p class="lead">Největším darem pro nás bude, když tento den prožijete společně s námi.</p>
+                <!-- Konkrétní text k darům doplníme podle vašeho přání. -->
+            </div>
+        </section>
 
-<section>
-    <div class="container">
-        <h2>Místo konání</h2>
-    </div>
-</section>
+        <section id="dekovani" class="content-section content-section--soft">
+            <div class="container narrow">
+                <p class="eyebrow">Po svatbě</p>
+                <h2>Poděkování</h2>
+                <p class="lead">Děkujeme, že jste byli součástí našeho dne.</p>
+                <div class="photo-placeholder" aria-label="Fotografie ze svatby">
+                    <span>Fotografie ze svatby</span>
+                </div>
+            </div>
+        </section>
 
-<section>
-    <div class="container">
-        <h2>Potvrzení účasti</h2>
-    </div>
-</section>
+        <section id="galerie" class="content-section gallery-section">
+            <div class="container">
+                <p class="eyebrow">Naše společné chvíle</p>
+                <h2>Galerie</h2>
+                <div class="gallery-placeholder">
+                    <span>Fotografie doplníme po svatbě</span>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<footer>
+    <footer>
+        <p>S láskou Michal &amp; Lucie</p>
+    </footer>
 
-    S láskou Michal & Lucie
-
-</footer>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>

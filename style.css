@@ -1,300 +1,353 @@
-:root{
+ :root {
+    --cream: #F7F3EC;
+    --cream-dark: #F0EBE1;
+    --gold: #B79A63;
+    --gold-light: #D4B67A;
+    --green: #314133;
+    --green-light: #49604C;
+    --text: #3A342F;
+    --text-light: #6A645E;
+    --white: #FFFFFF;
 
-    /* Barvy */
-
-    --cream:#F7F3EC;
-    --cream-dark:#F0EBE1;
-
-    --gold:#B79A63;
-    --gold-light:#D4B67A;
-
-    --green:#314133;
-    --green-light:#49604C;
-
-    --text:#3A342F;
-    --text-light:#6A645E;
-
-    --white:#FFFFFF;
-
-    /* Rozměry */
-
-    --max-width:1200px;
-
-    --radius:18px;
-    --radius-large:30px;
-
-    /* Stíny */
-
-    --shadow-small:0 6px 18px rgba(0,0,0,.05);
-    --shadow-large:0 15px 40px rgba(0,0,0,.08);
-
-    /* Animace */
-
-    --transition:.35s ease;
-
+    --max-width: 1200px;
+    --transition: .35s ease;
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-
-    scroll-behavior:smooth;
-
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-
-    background:var(--cream);
-    color:var(--text);
-
-    font-family:"Montserrat",sans-serif;
-    line-height:1.8;
-
+body {
+    min-width: 320px;
+    background: var(--cream);
+    color: var(--text);
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.8;
 }
 
-h1,h2{
-
-    font-family:"Cormorant Garamond",serif;
-    font-weight:500;
-
+h1,
+h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
 }
 
-.hero{
-
-    min-height:100vh;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
-    padding:40px;
-
+.hero {
+    min-height: 100svh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 70px 30px 45px;
+    position: relative;
 }
 
-.castle{
-
-    width:180px;
-    margin-bottom:35px;
-
+.castle {
+    display: block;
+    width: min(340px, 58vw);
+    max-height: 170px;
+    object-fit: contain;
+    margin-bottom: 28px;
 }
 
-.hero h2{
-
-    color:var(--gold);
-
-    letter-spacing:4px;
-
-    text-transform:uppercase;
-
-    font-size:22px;
-
+.hero h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    font-size: clamp(52px, 7vw, 82px);
+    line-height: 1;
+    color: var(--green);
 }
 
-.hero h1{
-
-    font-size:82px;
-
-    margin:20px 0;
-
-    color:var(--green);
-
+.rings {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+    margin: 0 18px;
+    flex: 0 0 auto;
 }
 
-.rings{
-
-    width:46px;
-
-    margin:0 18px;
-
-    vertical-align:middle;
-
+.date {
+    margin-top: 26px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(23px, 3vw, 30px);
+    color: var(--text);
 }
 
-.date{
-
-    font-size:28px;
-
-    margin-bottom:40px;
-
+.countdown-title {
+    margin-top: 34px;
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
-.button{
-
-    padding:14px 36px;
-
-    border:1px solid var(--gold);
-
-    text-decoration:none;
-
-    color:var(--green);
-
-    transition:.3s;
-
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: clamp(25px, 5vw, 55px);
+    margin: 14px 0 25px;
 }
 
-.button:hover{
-
-    background:var(--gold);
-
-    color:white;
-
+.countdown div {
+    min-width: 82px;
+    text-align: center;
 }
 
-section{
-
-    max-width:900px;
-
-    margin:auto;
-
-    padding:120px 30px;
-
+.countdown span {
+    display: block;
+    color: var(--green);
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(34px, 4vw, 46px);
+    font-weight: 500;
+    line-height: 1.15;
+    font-variant-numeric: tabular-nums;
 }
 
-section h2{
-
-    text-align:center;
-
-    color:var(--green);
-
-    font-size:54px;
-
-    margin-bottom:40px;
-
+.countdown small {
+    display: block;
+    margin-top: 3px;
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-footer{
-
-    text-align:center;
-
-    padding:80px;
-
-    color:var(--gold);
-
+.scroll-arrow {
+    width: 34px;
+    height: 44px;
+    margin-top: 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-decoration: none;
+    animation: arrowFloat 2.2s ease-in-out infinite;
 }
 
-.corner{
-
-    position:fixed;
-
-    width:220px;
-
-    height:220px;
-
-    background-size:contain;
-
-    background-repeat:no-repeat;
-
-    opacity:.12;
-
-    pointer-events:none;
-
+.scroll-arrow span {
+    width: 14px;
+    height: 14px;
+    border-right: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+    transform: rotate(45deg);
 }
 
-.top-left{
-
-    top:0;
-    left:0;
-
-    background-image:url(images/botanical-top-left.svg);
-
+@keyframes arrowFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(7px); }
 }
 
-.top-right{
-
-    top:0;
-    right:0;
-
-    background-image:url(images/botanical-top-right.svg);
-
+.content-section {
+    padding: 120px 30px;
+    scroll-margin-top: 20px;
 }
 
-.bottom-left{
-
-    bottom:0;
-    left:0;
-
-    background-image:url(images/botanical-bottom-left.svg);
-
+.content-section--soft {
+    background: var(--cream-dark);
 }
 
-.bottom-right{
-
-    bottom:0;
-    right:0;
-
-    background-image:url(images/botanical-bottom-right.svg);
-
+.container {
+    width: min(92%, var(--max-width));
+    margin: 0 auto;
 }
 
- .countdown{
-    display:flex;
-    gap:30px;
-    justify-content:center;
-    margin:40px 0 60px;
-    flex-wrap:wrap;
+.narrow {
+    max-width: 760px;
+    text-align: center;
 }
 
-.countdown div{
-    min-width:90px;
+.eyebrow {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
-.countdown span{
-
-    font-family:"Montserrat",sans-serif;
-    font-size:42px;
-    font-weight:500;
-    color:var(--green);
-
+.content-section h2 {
+    color: var(--green);
+    font-size: clamp(48px, 6vw, 64px);
+    line-height: 1;
+    margin-bottom: 28px;
 }
 
-.countdown small{
-    display:block;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    color:var(--gold);
+.lead {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 17px;
+    color: var(--text-light);
 }
 
-
-@media(max-width:768px){
-
-.hero h1{
-
-    font-size:48px;
-
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 38px;
+    color: var(--green);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
 }
 
-section h2{
-
-    font-size:42px;
-
+.location-line {
+    width: 55px;
+    height: 1px;
+    background: var(--gold);
+    flex: 0 0 auto;
 }
 
-.castle{
-
-    width:130px;
-
+.photo-placeholder,
+.gallery-placeholder {
+    margin: 45px auto 0;
+    border: 1px solid rgba(183, 154, 99, .35);
+    background: rgba(255, 255, 255, .25);
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 10px;
 }
 
-   
+.photo-placeholder {
+    width: min(760px, 100%);
+    aspect-ratio: 16 / 9;
 }
 
-/* ===========================
-   CONTAINER
-=========================== */
+.gallery-placeholder {
+    min-height: 260px;
+}
 
-.container{
+footer {
+    padding: 60px 30px 80px;
+    text-align: center;
+    color: var(--gold);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 23px;
+}
 
-    width:min(92%, var(--max-width));
-    margin:0 auto;
+.corner {
+    position: fixed;
+    z-index: 10;
+    width: 170px;
+    height: 170px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: .55;
+    pointer-events: none;
+}
 
+.top-left {
+    top: 0;
+    left: 0;
+    background-image: url(images/botanical.png);
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+    background-image: url(images/botanical.png);
+    transform: scaleX(-1);
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 0;
+    background-image: url(images/botanical.png);
+    transform: scaleY(-1);
+}
+
+.bottom-right {
+    bottom: 0;
+    right: 0;
+    background-image: url(images/botanical.png);
+    transform: scale(-1);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 55px 20px 35px;
+    }
+
+    .castle {
+        width: min(280px, 68vw);
+        margin-bottom: 22px;
+    }
+
+    .rings {
+        width: 34px;
+        height: 34px;
+        margin: 0 10px;
+    }
+
+    .date {
+        margin-top: 20px;
+    }
+
+    .countdown-title {
+        margin-top: 28px;
+        letter-spacing: 2px;
+    }
+
+    .countdown {
+        gap: 12px;
+        margin-bottom: 18px;
+    }
+
+    .countdown div {
+        min-width: 76px;
+    }
+
+    .content-section {
+        padding: 90px 22px;
+    }
+
+    .location {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .location-line {
+        width: 45px;
+    }
+
+    .corner {
+        width: 145px;
+        height: 145px;
+        opacity: .10;
+    }
+}
+
+@media (max-width: 430px) {
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .rings {
+        width: 30px;
+        height: 30px;
+        margin: 0 7px;
+    }
+
+    .countdown div {
+        min-width: 70px;
+    }
+
+    .countdown span {
+        font-size: 32px;
+    }
+
+    .countdown small {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
 }
