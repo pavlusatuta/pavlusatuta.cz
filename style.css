@@ -259,7 +259,7 @@ footer {
     height: 170px;
     background-size: contain;
     background-repeat: no-repeat;
-    opacity: .75;
+    opacity: .65;
     pointer-events: none;
 }
 
@@ -340,7 +340,7 @@ footer {
     .corner {
         width: 145px;
         height: 145px;
-        opacity: .10;
+        opacity: .30;
     }
 }
 
