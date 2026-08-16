@@ -637,3 +637,28 @@ footer {
         bottom: 18px;
     }
 }
+
+/* Šipka na desktopu – vždy dole uprostřed slidu */
+@media (min-width: 769px) {
+    .content-section {
+        position: relative;
+    }
+
+    .scroll-arrow {
+        position: absolute;
+        left: 50%;
+        bottom: 28px;
+        margin-top: 0;
+        transform: translateX(-50%);
+    }
+
+    @keyframes arrowFloat {
+        0%, 100% {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        50% {
+            transform: translateX(-50%) translateY(7px);
+        }
+    }
+}
