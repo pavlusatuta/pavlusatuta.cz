@@ -535,3 +535,25 @@ footer {
         height: 230px;
         margin-top: 22px;
     }
+
+ /* ===========================
+   JEDNOTLIVÉ SLIDY
+=========================== */
+
+.content-section {
+    min-height: 100svh;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 90px 30px 110px;
+}
+
+.content-section .container {
+    width: 100%;
+}
