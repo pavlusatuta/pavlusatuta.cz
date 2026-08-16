@@ -139,6 +139,14 @@ h2 {
     text-transform: uppercase;
 }
 
+.meeting-time {
+    margin-top: 10px;
+    color: var(--gold);
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
 .scroll-arrow {
     width: 34px;
     height: 44px;
