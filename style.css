@@ -774,3 +774,178 @@ footer {
         bottom: 18px;
     }
 }
+/* =========================================================
+   POTVRZENÍ ÚČASTI
+   ========================================================= */
+
+.rsvp-form {
+    width: min(520px, 90vw);
+    margin: 28px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.rsvp-form label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    color: var(--green);
+    margin-top: 8px;
+}
+
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    color: var(--green);
+
+    background: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(180, 145, 85, 0.65);
+    border-radius: 3px;
+
+    outline: none;
+    transition: border-color 0.2s ease,
+                background 0.2s ease;
+}
+
+.rsvp-form input:focus,
+.rsvp-form select:focus,
+.rsvp-form textarea:focus {
+    border-color: var(--gold);
+    background: rgba(255, 255, 255, 0.55);
+}
+
+.rsvp-form textarea {
+    resize: vertical;
+    min-height: 75px;
+}
+
+.rsvp-button {
+    align-self: center;
+    margin-top: 18px;
+
+    padding: 12px 30px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+
+    background: transparent;
+    border: 1px solid var(--gold);
+    border-radius: 30px;
+
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.rsvp-button:hover {
+    background: var(--gold);
+    color: #fff;
+}
+
+.rsvp-button:disabled {
+    opacity: 0.55;
+    cursor: default;
+}
+
+.rsvp-message {
+    min-height: 22px;
+    margin: 8px 0 0;
+
+    text-align: center;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: var(--gold);
+}
+
+
+/* Na začátku formuláře není počet osob potřeba,
+   dokud se nezvolí účast. */
+#pocet-wrap {
+    display: none;
+}
+
+
+/* =========================================================
+   TELEFON
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .rsvp-form {
+        width: min(92vw, 430px);
+        margin-top: 20px;
+        gap: 7px;
+    }
+
+    .rsvp-form label {
+        font-size: 11px;
+        margin-top: 5px;
+    }
+
+    .rsvp-form input,
+    .rsvp-form select,
+    .rsvp-form textarea {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .rsvp-form textarea {
+        min-height: 65px;
+    }
+
+    .rsvp-button {
+        margin-top: 12px;
+        padding: 10px 25px;
+        font-size: 13px;
+    }
+
+    .rsvp-message {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   MENŠÍ VÝŠKA NOTEBOOKU
+   ========================================================= */
+
+@media (max-height: 800px) and (min-width: 601px) {
+
+    .rsvp-form {
+        margin-top: 14px;
+        gap: 5px;
+    }
+
+    .rsvp-form label {
+        margin-top: 3px;
+        font-size: 11px;
+    }
+
+    .rsvp-form input,
+    .rsvp-form select,
+    .rsvp-form textarea {
+        padding: 8px 11px;
+        font-size: 14px;
+    }
+
+    .rsvp-form textarea {
+        min-height: 55px;
+    }
+
+    .rsvp-button {
+        margin-top: 10px;
+        padding: 9px 24px;
+    }
+}
