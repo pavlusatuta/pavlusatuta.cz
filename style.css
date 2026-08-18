@@ -13,6 +13,11 @@
     --transition: .35s ease;
 }
 
+
+/* =========================
+   ZÁKLAD
+   ========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -37,25 +42,27 @@ h2 {
     font-weight: 500;
 }
 
+
+/* =========================
+   ÚVODNÍ SLIDE
+   ========================= */
+
 .hero {
-    min-height: 100svh;
+    width: 100%;
     height: 100svh;
-    box-sizing: border-box;
+    min-height: 100svh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 70px 30px 45px;
-    position: relative;
-}
 
-.castle {
-    display: block;
-    width: min(260px, 48vw);
-    max-height: 130px;
-    object-fit: contain;
-    margin: 5px auto 18px;
+    text-align: center;
+
+    padding: 70px 30px 45px;
+
+    position: relative;
+    box-sizing: border-box;
 }
 
 .hero h1 {
@@ -63,55 +70,97 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     font-family: "Great Vibes", cursive;
     font-weight: 400;
+
     font-size: clamp(50px, 6.2vw, 76px);
     line-height: 1.05;
+
     color: #000000;
+
     margin: 0 0 20px;
 }
+
+.castle {
+    display: block;
+
+    width: min(260px, 48vw);
+    max-height: 130px;
+
+    object-fit: contain;
+
+    margin: 5px auto 18px;
+}
+
+
+/* =========================
+   PRSTÝNKY + ČÁRY
+   ========================= */
 
 .rings-divider {
     display: flex;
     align-items: center;
     justify-content: center;
+
     gap: 14px;
     margin: 8px 0;
 }
 
 .rings-divider .line {
     display: block;
+
     width: 90px;
     height: 2px;
+
     background: #C9963A;
 }
 
 .rings {
     width: 45px;
     height: 45px;
+
     object-fit: contain;
+
     flex: 0 0 auto;
 }
 
+
+/* =========================
+   DATUM
+   ========================= */
+
 .date {
     margin-top: 26px;
+
     font-family: "Cormorant Garamond", serif;
     font-size: clamp(23px, 3vw, 30px);
+
     color: var(--text);
 }
 
+
+/* =========================
+   ODPOČET
+   ========================= */
+
 .countdown-title {
     margin-top: 34px;
+
     color: var(--gold);
+
     font-size: 12px;
     letter-spacing: 3px;
+
     text-transform: uppercase;
 }
 
 .countdown {
     display: flex;
     justify-content: center;
+
     gap: clamp(25px, 5vw, 55px);
+
     margin: 14px 0 25px;
 }
 
@@ -122,65 +171,141 @@ h2 {
 
 .countdown span {
     display: block;
+
     color: var(--green);
+
     font-family: "Montserrat", sans-serif;
     font-size: clamp(34px, 4vw, 46px);
     font-weight: 500;
+
     line-height: 1.15;
+
     font-variant-numeric: tabular-nums;
 }
 
 .countdown small {
     display: block;
+
     margin-top: 3px;
+
     color: var(--gold);
+
     font-size: 10px;
     letter-spacing: 2px;
+
     text-transform: uppercase;
 }
 
 .meeting-time {
     margin-top: 10px;
+
     color: var(--gold);
+
     font-family: "Montserrat", sans-serif;
     font-size: 13px;
-    letter-spacing: 0.5px;
+
+    letter-spacing: .5px;
 }
+
+
+/* =========================
+   ŠIPKA PRO POSUN
+   ========================= */
 
 .scroll-arrow {
-    width: 34px;
-    height: 44px;
-    margin-top: 12px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    text-decoration: none;
-    animation: arrowFloat 2.2s ease-in-out infinite;
-}
+    position: absolute;
 
-.scroll-arrow span {
-    width: 14px;
-    height: 14px;
-    border-right: 1px solid var(--gold);
-    border-bottom: 1px solid var(--gold);
-    transform: rotate(45deg);
-}
+    left: 50%;
+    bottom: 22px;
 
-@keyframes arrowFloat {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(7px); }
-}
+    z-index: 20;
 
-.content-section {
-    min-height: 100svh;
-    min-height: 100vh;
-    position: relative;
-    box-sizing: border-box;
+    width: 42px;
+    height: 42px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 80px 30px 100px;
+
+    margin: 0;
+
+    transform: translateX(-50%);
+
+    text-decoration: none;
+}
+
+.scroll-arrow span {
+    position: relative;
+
+    display: block;
+
+    width: 20px;
+    height: 12px;
+
+    animation: arrowFloat 2.2s ease-in-out infinite;
+}
+
+.scroll-arrow span::before,
+.scroll-arrow span::after {
+    content: "";
+
+    position: absolute;
+    top: 3px;
+
+    width: 14px;
+    height: 1px;
+
+    background: var(--gold);
+}
+
+.scroll-arrow span::before {
+    left: 0;
+
+    transform: rotate(45deg);
+    transform-origin: left center;
+}
+
+.scroll-arrow span::after {
+    right: 0;
+
+    transform: rotate(-45deg);
+    transform-origin: right center;
+}
+
+@keyframes arrowFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(6px);
+    }
+}
+
+
+/* =========================
+   OBECNÉ SLIDY
+   ========================= */
+
+.content-section {
+    width: 100%;
+    height: 100svh;
+    min-height: 100vh;
+
+    position: relative;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 65px 30px 85px;
+
     scroll-margin-top: 0;
+
+    overflow: hidden;
 }
 
 .content-section--soft {
@@ -189,52 +314,145 @@ h2 {
 
 .container {
     width: min(92%, var(--max-width));
+
     margin: 0 auto;
 }
 
 .narrow {
     max-width: 760px;
+
     text-align: center;
 }
 
 .eyebrow {
     color: var(--gold);
+
     font-size: 11px;
     letter-spacing: 3px;
+
     text-transform: uppercase;
+
     margin-bottom: 10px;
 }
 
 .content-section h2 {
     color: var(--green);
+
     font-size: clamp(48px, 6vw, 64px);
     line-height: 1;
+
     margin-bottom: 28px;
 }
 
 .lead {
     max-width: 650px;
+
     margin: 0 auto;
+
     font-size: 17px;
+
     color: var(--text-light);
 }
+
+
+/* =========================
+   OBRAD – ADRESA
+   ========================= */
+
+.location-info {
+    font-size: 18px;
+    line-height: 1.8;
+
+    color: var(--text);
+}
+
+
+/* =========================
+   MAPA
+   ========================= */
+
+.map {
+    width: min(650px, 100%);
+    height: 280px;
+
+    margin: 22px auto 14px;
+
+    border: 1px solid rgba(183, 154, 99, .35);
+
+    overflow: hidden;
+}
+
+.map iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+
+/* =========================
+   TLAČÍTKO – TRASA
+   ========================= */
+
+.map-button {
+    display: inline-block;
+
+    padding: 9px 24px;
+
+    border: 1px solid var(--gold);
+    border-radius: 30px;
+
+    color: var(--gold);
+    background: transparent;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+
+    letter-spacing: .7px;
+
+    text-decoration: none;
+
+    transition:
+        background var(--transition),
+        color var(--transition);
+}
+
+.map-button:hover {
+    background: var(--gold);
+    color: var(--white);
+}
+
+
+/* =========================
+   OBRÁZKY / GALERIE
+   ========================= */
 
 .photo-placeholder,
 .gallery-placeholder {
     margin: 45px auto 0;
+
     border: 1px solid rgba(183, 154, 99, .35);
+
     background: rgba(255, 255, 255, .25);
+
     color: var(--gold);
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     letter-spacing: 2px;
+
     text-transform: uppercase;
+
     font-size: 10px;
 }
 
 .photo-placeholder {
     width: min(760px, 100%);
+
     aspect-ratio: 16 / 9;
 }
 
@@ -242,59 +460,91 @@ h2 {
     min-height: 260px;
 }
 
-footer {
-    padding: 60px 30px 80px;
-    text-align: center;
-    color: var(--gold);
-    font-family: "Cormorant Garamond", serif;
-    font-size: 23px;
-}
+
+/* =========================
+   ROHY
+   ========================= */
 
 .corner {
     position: fixed;
+
     z-index: 10;
+
     width: 170px;
     height: 170px;
+
     background-size: contain;
     background-repeat: no-repeat;
+
     opacity: .65;
+
     pointer-events: none;
 }
 
 .top-left {
     top: 0;
     left: 0;
+
     background-image: url(images/botanical.png);
 }
 
 .top-right {
     top: 0;
     right: 0;
+
     background-image: url(images/botanical.png);
+
     transform: scaleX(-1);
 }
 
 .bottom-left {
     bottom: 0;
     left: 0;
+
     background-image: url(images/botanical.png);
+
     transform: scaleY(-1);
 }
 
 .bottom-right {
     bottom: 0;
     right: 0;
+
     background-image: url(images/botanical.png);
+
     transform: scale(-1);
 }
 
+
+/* =========================
+   PATIČKA
+   ========================= */
+
+footer {
+    padding: 60px 30px 80px;
+
+    text-align: center;
+
+    color: var(--gold);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 23px;
+}
+
+
+/* =========================================================
+   MOBIL
+   ========================================================= */
+
 @media (max-width: 768px) {
+
     .hero {
         padding: 55px 20px 35px;
     }
 
     .castle {
         width: min(280px, 68vw);
+
         margin-bottom: 22px;
     }
 
@@ -317,11 +567,13 @@ footer {
 
     .countdown-title {
         margin-top: 28px;
+
         letter-spacing: 2px;
     }
 
     .countdown {
         gap: 12px;
+
         margin-bottom: 18px;
     }
 
@@ -330,7 +582,7 @@ footer {
     }
 
     .content-section {
-        padding: 70px 22px 85px;
+        padding: 60px 22px 70px;
     }
 
     .content-section h2 {
@@ -342,32 +594,41 @@ footer {
     }
 
     .location-info {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .map {
         height: 230px;
-        margin-top: 22px;
+
+        margin-top: 18px;
     }
 
     .map-button {
         padding: 8px 20px;
     }
 
-    .section-arrow {
-        bottom: 18px;
+    .scroll-arrow {
+        bottom: 16px;
     }
 
     .corner {
         width: 145px;
         height: 145px;
+
         opacity: .30;
     }
 }
 
+
+/* =========================================================
+   MALÝ TELEFON
+   ========================================================= */
+
 @media (max-width: 430px) {
+
     .hero h1 {
         font-size: 42px;
+
         white-space: normal;
         flex-wrap: nowrap;
     }
@@ -395,11 +656,20 @@ footer {
 
     .countdown small {
         font-size: 9px;
+
         letter-spacing: 1.5px;
+    }
+
+    .content-section {
+        padding: 50px 18px 60px;
     }
 
     #obrad h2 {
         font-size: 32px;
+    }
+
+    #obrad .location-info {
+        font-size: 16px;
     }
 
     #obrad .map {
@@ -407,21 +677,30 @@ footer {
     }
 }
 
-/* Menší výška – notebook */
+
+/* =========================================================
+   NOTEBOOK – MENŠÍ VÝŠKA OBRAZOVKY
+   ========================================================= */
+
 @media (min-width: 769px) and (max-height: 850px) {
+
     .hero {
         padding: 20px 25px 15px;
+
         justify-content: center;
     }
 
     .hero h1 {
         font-size: clamp(42px, 4.8vw, 58px);
+
         line-height: 1;
+
         margin-bottom: 5px;
     }
 
     .rings-divider {
         margin: 2px 0;
+
         gap: 12px;
     }
 
@@ -438,11 +717,13 @@ footer {
     .castle {
         width: min(210px, 38vw);
         max-height: 100px;
+
         margin: 0 auto 5px;
     }
 
     .date {
         margin-top: 2px;
+
         font-size: 25px;
     }
 
@@ -455,168 +736,17 @@ footer {
         margin-bottom: 5px;
     }
 
-    .hero > .scroll-arrow {
-        margin-top: 2px;
-        height: 30px;
-    }
-
     .content-section {
-        padding: 45px 25px 75px;
-    }
-
-    #obrad h2 {
-        font-size: 34px;
-        margin-bottom: 8px;
-    }
-
-    #obrad .location-info {
-        font-size: 18px;
-    }
-
-    #obrad .map {
-        height: 210px;
-        margin: 16px auto 12px;
+        padding: 35px 25px 60px;
     }
 
     .content-section h2 {
         font-size: 42px;
     }
-}
-
-/* ===== OPRAVA SLIDE SEKCI A OBRADU ===== */
-
-.content-section {
-    width: 100%;
-    height: 100svh;
-    min-height: 100vh;
-    position: relative;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 65px 30px 85px;
-    scroll-margin-top: 0;
-    overflow: hidden;
-}
-
-.location-info {
-    font-size: 18px;
-    line-height: 1.8;
-    color: var(--text);
-}
-
-.map {
-    width: min(650px, 100%);
-    height: 280px;
-    margin: 22px auto 14px;
-    border: 1px solid rgba(183, 154, 99, .35);
-    overflow: hidden;
-}
-
-.map iframe {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-.map-button {
-    display: inline-block;
-    padding: 9px 24px;
-    border: 1px solid var(--gold);
-    border-radius: 30px;
-    color: var(--gold);
-    background: transparent;
-    font-family: "Montserrat", sans-serif;
-    font-size: 13px;
-    letter-spacing: .7px;
-    text-decoration: none;
-    transition: background var(--transition), color var(--transition);
-}
-
-.map-button:hover {
-    background: var(--gold);
-    color: var(--white);
-}
-
-.scroll-arrow {
-    position: absolute;
-    left: 50%;
-    bottom: 24px;
-    z-index: 20;
-    width: 42px;
-    height: 42px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translateX(-50%);
-    text-decoration: none;
-}
-
-.scroll-arrow span {
-    display: block;
-    width: 17px;
-    height: 17px;
-    border-right: 1.5px solid var(--gold);
-    border-bottom: 1.5px solid var(--gold);
-    transform: rotate(45deg);
-    animation: arrowFloat 2.2s ease-in-out infinite;
-}
-
-@keyframes arrowFloat {
-    0%, 100% {
-        transform: rotate(45deg) translate(0, 0);
-    }
-    50% {
-        transform: rotate(45deg) translate(4px, 4px);
-    }
-}
-
-@media (max-width: 768px) {
-    .content-section {
-        padding: 60px 22px 70px;
-    }
-
-    .location-info {
-        font-size: 17px;
-    }
-
-    .map {
-        height: 230px;
-        margin-top: 18px;
-    }
-
-    .map-button {
-        padding: 8px 20px;
-    }
-
-    .scroll-arrow {
-        bottom: 16px;
-    }
-}
-
-@media (max-width: 430px) {
-    .content-section {
-        padding: 50px 18px 60px;
-    }
-
-    #obrad .location-info {
-        font-size: 16px;
-    }
-
-    #obrad .map {
-        height: 220px;
-    }
-}
-
-@media (min-width: 769px) and (max-height: 850px) {
-    .content-section {
-        padding: 35px 25px 60px;
-    }
 
     #obrad h2 {
         font-size: 34px;
+
         margin-bottom: 8px;
     }
 
@@ -626,6 +756,7 @@ footer {
 
     #obrad .map {
         height: 210px;
+
         margin: 14px auto 12px;
     }
 
@@ -635,30 +766,5 @@ footer {
 
     .scroll-arrow {
         bottom: 18px;
-    }
-}
-
-/* Šipka na desktopu – vždy dole uprostřed slidu */
-@media (min-width: 769px) {
-    .content-section {
-        position: relative;
-    }
-
-    .scroll-arrow {
-        position: absolute;
-        left: 50%;
-        bottom: 28px;
-        margin-top: 0;
-        transform: translateX(-50%);
-    }
-
-    @keyframes arrowFloat {
-        0%, 100% {
-            transform: translateX(-50%) translateY(0);
-        }
-
-        50% {
-            transform: translateX(-50%) translateY(7px);
-        }
     }
 }
