@@ -119,26 +119,82 @@
 
     </div>
 
-            <a class="scroll-arrow section-arrow" href="#dekovani" aria-label="Přejít na poděkování">
+            <a class="scroll-arrow section-arrow" href="#potvrzeni" aria-label="Přejít na potvrzení">
                 <span></span>
             </a>
         </section>
 
-        <section id="dekovani" class="content-section content-section--soft">
-            <div class="container narrow">
-                <p class="eyebrow">Těšíme se na Vás</p>
-                <h2>Poděkování</h2>
-                <p class="lead">Děkujeme, že jste byli součástí našeho dne.</p>
-                <div class="photo-placeholder" aria-label="Fotografie ze svatby">
-                    <span>Fotografie ze svatby</span>
-                </div>
+       <section id="potvrzeni" class="content-section content-section--soft">
+
+    <div class="container narrow">
+
+        <div class="eyebrow">Potvrzení účasti</div>
+
+        <h2>Potvrzení účasti</h2>
+
+        <p class="lead">
+            Budeme rádi, když nám dáte vědět, zda s vámi můžeme počítat.
+        </p>
+
+        <p class="lead">
+            Prosíme o potvrzení účasti do <strong>[DATUM]</strong>.
+        </p>
+
+        <form id="rsvp-form" class="rsvp-form">
+
+            <label for="jmeno">Jméno a příjmení</label>
+            <input
+                type="text"
+                id="jmeno"
+                name="jmeno"
+                required
+                autocomplete="name"
+            >
+
+            <label for="ucast">Účast</label>
+            <select id="ucast" name="ucast" required>
+                <option value="" selected disabled>Vyberte možnost</option>
+                <option value="Ano, přijdu">Ano, přijdu</option>
+                <option value="Bohužel se nezúčastním">
+                    Bohužel se nezúčastním
+                </option>
+            </select>
+
+            <div id="pocet-wrap">
+                <label for="pocet">Počet osob</label>
+                <select id="pocet" name="pocet">
+                    <option value="1">1 osoba</option>
+                    <option value="2">2 osoby</option>
+                    <option value="3">3 osoby</option>
+                    <option value="4">4 osoby</option>
+                    <option value="5">5 osob</option>
+                    <option value="6">6 osob</option>
+                </select>
             </div>
 
-            <a class="scroll-arrow section-arrow" href="#galerie" aria-label="Přejít do galerie">
-                <span></span>
-            </a>
-        </section>
+            <label for="poznamka">Poznámka</label>
+            <textarea
+                id="poznamka"
+                name="poznamka"
+                rows="3"
+                placeholder="Například stravovací omezení..."
+            ></textarea>
 
+            <button type="submit" class="rsvp-button">
+                Potvrdit účast
+            </button>
+
+            <p id="rsvp-message" class="rsvp-message"></p>
+
+        </form>
+
+    </div>
+
+    <a class="scroll-arrow" href="#gallery" aria-label="Přejít do galerie">
+        <span></span>
+    </a>
+
+</section>
         <section id="galerie" class="content-section gallery-section">
             <div class="container">
                 <p class="eyebrow">Naše společné chvíle</p>
