@@ -40,6 +40,11 @@ if (rsvpForm) {
     const pocetWrap = document.getElementById("pocet-wrap");
     const message = document.getElementById("rsvp-message");
 
+    // Po načtení stránky počet osob schovat
+    pocetWrap.style.display = "none";
+
+
+    // Změna účasti
     ucast.addEventListener("change", () => {
 
         if (ucast.value === "Ano, přijdu") {
@@ -50,6 +55,8 @@ if (rsvpForm) {
 
     });
 
+
+    // Odeslání formuláře
     rsvpForm.addEventListener("submit", async (event) => {
 
         event.preventDefault();
@@ -85,7 +92,9 @@ if (rsvpForm) {
                 "Děkujeme, vaše potvrzení bylo odesláno.";
 
             rsvpForm.reset();
-            pocetWrap.style.display = "block";
+
+            // Po resetu znovu schovat počet osob
+            pocetWrap.style.display = "none";
 
         } catch (error) {
 
