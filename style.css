@@ -949,3 +949,73 @@ footer {
         padding: 9px 24px;
     }
 }
+
+/* =========================================================
+   TĚŠÍME SE NA VÁS
+   ========================================================= */
+
+.tesime-section {
+    text-align: center;
+}
+
+.tesime-photo {
+    width: min(560px, 85vw);
+    margin: 18px auto 20px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(183, 154, 99, .45);
+}
+
+.tesime-photo img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-height: 48vh;
+
+    object-fit: cover;
+}
+
+.tesime-section .lead {
+    max-width: 560px;
+}
+
+
+/* Telefon */
+
+@media (max-width: 600px) {
+
+    .tesime-photo {
+        width: min(88vw, 430px);
+        margin: 14px auto 16px;
+    }
+
+    .tesime-photo img {
+        max-height: 42vh;
+    }
+
+    .tesime-section .lead {
+        font-size: 15px;
+    }
+}
+
+
+/* Notebook s menší výškou */
+
+@media (max-height: 800px) and (min-width: 601px) {
+
+    .tesime-photo {
+        width: min(500px, 70vw);
+        margin: 10px auto 12px;
+    }
+
+    .tesime-photo img {
+        max-height: 40vh;
+    }
+
+    .tesime-section .lead {
+        font-size: 15px;
+    }
+}
