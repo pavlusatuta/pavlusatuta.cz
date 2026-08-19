@@ -121,6 +121,7 @@ h2 {
     height: 45px;
 
     object-fit: contain;
+
     flex: 0 0 auto;
 }
 
@@ -313,11 +314,13 @@ h2 {
 
 .container {
     width: min(92%, var(--max-width));
+
     margin: 0 auto;
 }
 
 .narrow {
     max-width: 760px;
+
     text-align: center;
 }
 
@@ -449,6 +452,7 @@ h2 {
 
 .photo-placeholder {
     width: min(760px, 100%);
+
     aspect-ratio: 16 / 9;
 }
 
@@ -533,8 +537,8 @@ footer {
    ========================================================= */
 
 .rsvp-form {
-    width: min(520px, 100%);
-    max-width: 520px;
+    width: min(520px, 90vw);
+    max-width: 100%;
 
     margin: 28px auto 0;
 
@@ -588,6 +592,7 @@ footer {
 .rsvp-form select:focus,
 .rsvp-form textarea:focus {
     border-color: var(--gold);
+
     background: rgba(255, 255, 255, 0.55);
 }
 
@@ -656,6 +661,8 @@ footer {
 
 /* =========================================================
    TĚŠÍME SE NA VÁS
+   Fotka 1023 × 1537
+   Zachovaný poměr stran – bez ořezu
    ========================================================= */
 
 .tesime-section {
@@ -663,13 +670,14 @@ footer {
 }
 
 .tesime-photo {
-    width: min(560px, 85vw);
+    width: min(430px, 70vw, 30vh);
+    height: auto;
 
-    margin: 18px auto 20px;
-
-    overflow: hidden;
+    margin: 12px auto 14px;
 
     border: 1px solid rgba(183, 154, 99, .45);
+
+    overflow: visible;
 }
 
 .tesime-photo img {
@@ -678,7 +686,9 @@ footer {
     width: 100%;
     height: auto;
 
-    /* ŽÁDNÝ OŘEZ */
+    max-width: 100%;
+    max-height: none;
+
     object-fit: contain;
 }
 
@@ -731,11 +741,13 @@ footer {
 
     .countdown-title {
         margin-top: 28px;
+
         letter-spacing: 2px;
     }
 
     .countdown {
         gap: 12px;
+
         margin-bottom: 18px;
     }
 
@@ -757,6 +769,7 @@ footer {
 
     .map {
         height: 230px;
+
         margin-top: 18px;
     }
 
@@ -775,6 +788,7 @@ footer {
         opacity: .30;
     }
 
+
     /* RSVP */
 
     .rsvp-form {
@@ -788,6 +802,7 @@ footer {
 
     .rsvp-form label {
         font-size: 11px;
+
         margin-top: 5px;
     }
 
@@ -816,22 +831,6 @@ footer {
 
     .rsvp-message {
         font-size: 13px;
-    }
-
-    /* Těšíme se */
-
-    .tesime-photo {
-        width: min(88vw, 430px);
-
-        margin: 14px auto 16px;
-    }
-
-    .tesime-photo img {
-        width: 100%;
-        height: auto;
-
-        max-height: none;
-        object-fit: contain;
     }
 
     .tesime-section .lead {
@@ -876,6 +875,7 @@ footer {
 
     .countdown small {
         font-size: 9px;
+
         letter-spacing: 1.5px;
     }
 
@@ -919,6 +919,7 @@ footer {
 
     .rings-divider {
         margin: 2px 0;
+
         gap: 12px;
     }
 
@@ -941,6 +942,7 @@ footer {
 
     .date {
         margin-top: 2px;
+
         font-size: 25px;
     }
 
@@ -963,6 +965,7 @@ footer {
 
     #obrad h2 {
         font-size: 34px;
+
         margin-bottom: 8px;
     }
 
@@ -972,6 +975,7 @@ footer {
 
     #obrad .map {
         height: 210px;
+
         margin: 14px auto 12px;
     }
 
@@ -983,15 +987,18 @@ footer {
         bottom: 18px;
     }
 
+
     /* RSVP */
 
     .rsvp-form {
         margin-top: 14px;
+
         gap: 5px;
     }
 
     .rsvp-form label {
         margin-top: 3px;
+
         font-size: 11px;
     }
 
@@ -999,6 +1006,7 @@ footer {
     .rsvp-form select,
     .rsvp-form textarea {
         padding: 8px 11px;
+
         font-size: 14px;
     }
 
@@ -1008,25 +1016,7 @@ footer {
 
     .rsvp-button {
         margin-top: 10px;
+
         padding: 9px 24px;
-    }
-
-    /* Těšíme se */
-
-    .tesime-photo {
-        width: min(500px, 70vw);
-        margin: 10px auto 12px;
-    }
-
-    .tesime-photo img {
-        width: 100%;
-        height: auto;
-
-        max-height: none;
-        object-fit: contain;
-    }
-
-    .tesime-section .lead {
-        font-size: 15px;
     }
 }
