@@ -975,8 +975,17 @@ footer {
 
     #obrad .map {
         height: 210px;
-
         margin: 14px auto 12px;
+    }
+    
+    #party h2 {
+    font-size: 34px;
+    margin-bottom: 8px;
+    }
+
+    #party .map {
+    height: 210px;
+    margin: 14px auto 12px;
     }
 
     .map-button {
